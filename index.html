@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Manager</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Add Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Financial Manager</h1>
+
+    <!-- Navigation Tabs -->
+    <div class="tabs">
+      <button id="dashboardTab" class="tab-button active">Dashboard</button>
+      <button id="transactionsTab" class="tab-button">Transactions</button>
+      <button id="savingsTab" class="tab-button">Savings Goals</button>
+      <button id="paymentsTab" class="tab-button">Monthly Payments</button>
+    </div>
+
+    <!-- Dashboard Tab -->
+    <div id="dashboard" class="tab-content active">
+      <div class="dashboard">
+        <div class="card">
+          <div class="card-header">
+            <h3>Total Balance</h3>
+            <button id="editBalanceBtn" class="edit-icon"><i class="fas fa-pen"></i></button>
+          </div>
+          <p id="totalBalance">$0.00</p>
+          <div id="editBalanceForm" class="edit-form">
+            <input type="number" id="editBalanceInput" placeholder="New Balance">
+            <button id="updateBalance" class="edit-btn">Update</button>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Income</h3>
+          <p id="totalIncome">$0.00</p>
+        </div>
+        <div class="card">
+          <h3>Expenses</h3>
+          <p id="totalExpenses">$0.00</p>
+        </div>
+        <div class="card">
+          <h3>Monthly Payments</h3>
+          <p id="totalMonthlyPayments">$0.00</p>
+          <ul id="dashboardMonthlyPaymentsList">
+            <!-- Monthly payments will be added here dynamically -->
+          </ul>
+        </div>
+      </div>
+
+      <!-- Recent Transactions -->
+      <h2>Recent Transactions</h2>
+      <table id="recentTransactionsTable">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Type</th>
+            <th>Category</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Recent transactions will be added here dynamically -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Transactions Tab -->
+    <div id="transactions" class="tab-content">
+      <!-- Transaction Form -->
+      <form id="transactionForm">
+        <input type="date" id="date" required>
+        <input type="number" id="amount" placeholder="Amount" required>
+        <select id="type" required>
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+        <input type="text" id="category" placeholder="Category" required>
+        <input type="text" id="description" placeholder="Description">
+        <button type="submit">Add Transaction</button>
+      </form>
+
+      <!-- Transactions Table -->
+      <h2>All Transactions</h2>
+      <table id="transactionTable">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Type</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Transactions will be added here dynamically -->
+        </tbody>
+      </table>
+
+      <!-- Clear All Button -->
+      <button id="clearAll" class="clear-btn">Clear All Transactions</button>
+    </div>
+
+    <!-- Savings Goals Tab -->
+    <div id="savings" class="tab-content">
+      <div class="card">
+        <h3>Savings Goals</h3>
+        <form id="savingsGoalForm">
+          <input type="text" id="goalName" placeholder="Goal Name" required>
+          <input type="number" id="goalAmount" placeholder="Target Amount" required>
+          <button type="submit">Add Goal</button>
+        </form>
+        <ul id="savingsGoalsList">
+          <!-- Goals will be added here dynamically -->
+        </ul>
+      </div>
+    </div>
+
+    <!-- Monthly Payments Tab -->
+    <div id="payments" class="tab-content">
+      <div class="card">
+        <h3>Monthly Payments</h3>
+        <form id="monthlyPaymentForm">
+          <input type="text" id="paymentName" placeholder="Payment Name" required>
+          <input type="number" id="paymentAmount" placeholder="Total Amount" required>
+          <input type="number" id="monthlyPaymentAmount" placeholder="Monthly Payment" required>
+          <input type="number" id="paymentRemaining" placeholder="Payments Remaining" required>
+          <button type="submit">Add Payment</button>
+        </form>
+        <ul id="monthlyPaymentsList">
+          <!-- Monthly payments will be added here dynamically -->
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

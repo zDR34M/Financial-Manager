@@ -1,0 +1,313 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #0a192f; /* Dark blue background */
+  color: #ccd6f6; /* Light text color */
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: #112240; /* Slightly lighter dark blue for the container */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 800px;
+}
+
+h1, h2 {
+  color: #64ffda; /* Teal accent color for headings */
+  text-align: center;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  background: #1f2a48;
+  border: none;
+  color: #ccd6f6;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.tab-button.active {
+  background: #64ffda;
+  color: #0a192f;
+}
+
+.tab-button:hover {
+  background: #52d1b2;
+  color: #0a192f;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Dashboard */
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: #1f2a48; /* Dark blue card background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  flex: 1;
+  min-width: 200px;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #ccd6f6; /* Light text color */
+}
+
+.card p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #64ffda; /* Teal accent color for numbers */
+  margin: 10px 0 0;
+}
+
+/* Edit Icon */
+.edit-icon {
+  background: none;
+  border: none;
+  color: #64ffda; /* Teal accent color for the icon */
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.edit-icon:hover {
+  color: #52d1b2; /* Slightly darker teal on hover */
+  opacity: 0.7; /* Make the icon slightly transparent */
+}
+
+/* Card Header */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Edit Form */
+.edit-form {
+  display: none; /* Hidden by default */
+  margin-top: 10px;
+}
+
+.edit-form input {
+  width: calc(100% - 80px);
+  padding: 8px;
+  border: 1px solid #233554; /* Dark blue border */
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #1f2a48; /* Dark blue input background */
+  color: #ccd6f6; /* Light text color */
+}
+
+.edit-form button {
+  width: 70px;
+  padding: 8px;
+  background-color: #64ffda; /* Teal accent color for the button */
+  color: #0a192f; /* Dark blue text color */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit-form button:hover {
+  background-color: #52d1b2; /* Slightly darker teal on hover */
+}
+
+/* Transaction Form */
+form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input, select, button {
+  padding: 10px;
+  border: 1px solid #233554; /* Dark blue border */
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #1f2a48; /* Dark blue input background */
+  color: #ccd6f6; /* Light text color */
+}
+
+button {
+  background-color: #64ffda; /* Teal accent color for buttons */
+  color: #0a192f; /* Dark blue text color */
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #52d1b2; /* Slightly darker teal on hover */
+}
+
+/* Transactions Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #233554; /* Dark blue border */
+}
+
+th {
+  background-color: #1f2a48; /* Dark blue header background */
+  color: #64ffda; /* Teal accent color for header text */
+}
+
+td {
+  color: #ccd6f6; /* Light text color */
+}
+
+/* Delete Button */
+.delete-btn {
+  background-color: #ff6b6b; /* Red accent color for delete button */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #ff5252; /* Slightly darker red on hover */
+}
+
+/* Clear All Button */
+.clear-btn {
+  background-color: #ff6b6b; /* Red accent color for clear button */
+  width: 100%;
+  margin-top: 20px;
+}
+
+.clear-btn:hover {
+  background-color: #ff5252; /* Slightly darker red on hover */
+}
+
+/* Savings Goals */
+#savingsGoalsList {
+  list-style: none;
+  padding: 0;
+}
+
+#savingsGoalsList li {
+  background: #1f2a48;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#savingsGoalsList li button {
+  background: #ff6b6b;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Monthly Payments */
+#monthlyPaymentsList, #dashboardMonthlyPaymentsList {
+  list-style: none;
+  padding: 0;
+}
+
+#monthlyPaymentsList li, #dashboardMonthlyPaymentsList li {
+  background: #1f2a48;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#monthlyPaymentsList li button, #dashboardMonthlyPaymentsList li button {
+  background: #ff6b6b;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-payment-form {
+  display: none; /* Hidden by default */
+  margin-top: 10px;
+}
+
+.edit-payment-form input {
+  width: calc(100% - 80px);
+  padding: 8px;
+  border: 1px solid #233554;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #1f2a48;
+  color: #ccd6f6;
+}
+
+.edit-payment-form button {
+  width: 70px;
+  padding: 8px;
+  background-color: #64ffda;
+  color: #0a192f;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit-payment-form button:hover {
+  background-color: #52d1b2;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
+}
